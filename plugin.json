@@ -70,6 +70,13 @@
 			"manualUrl": "https://github.com/stoermelder/vcvrack-packone/blob/v1/docs/Infix.md"
 		},
 		{
+			"slug": "FMalgo",
+			"name": "FMALGO",
+			"description": "FM Operator Algorithms",
+			"tags": ["Utility"],
+			"manualUrl": "https://github.com/stoermelder/vcvrack-packone/blob/v1/docs/Strip.md"
+		},
+		{
 			"slug": "Strip",
 			"name": "STRIP",
 			"description": "Manage a group of modules by using the expander-mechanism, providing load, save, copy, paste, disable, enable and randomize",
