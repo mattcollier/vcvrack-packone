@@ -2,28 +2,28 @@ R"=====({
   "stripVersion": 1,
   "rightModules": [
     {
-      "id": 1344,
+      "id": 1444,
       "plugin": "Bogaudio",
       "version": "1.1.26",
       "model": "Bogaudio-Mult",
       "params": [],
-      "leftModuleId": 1337,
-      "rightModuleId": 1350
+      "leftModuleId": 1364,
+      "rightModuleId": 1445
     },
     {
-      "id": 1350,
+      "id": 1445,
       "plugin": "SubmarineFree",
       "version": "1.1.1",
       "model": "TD-202",
       "params": [],
-      "leftModuleId": 1344,
-      "rightModuleId": 1341,
+      "leftModuleId": 1444,
+      "rightModuleId": 1446,
       "text": "One",
       "fg": "#29b2ef",
       "bg": "#00000000"
     },
     {
-      "id": 1341,
+      "id": 1446,
       "plugin": "Bogaudio",
       "version": "1.1.26",
       "model": "Bogaudio-FMOp",
@@ -77,14 +77,14 @@ R"=====({
           "value": 0.0
         }
       ],
-      "leftModuleId": 1350,
-      "rightModuleId": 1340,
+      "leftModuleId": 1445,
+      "rightModuleId": 1447,
       "data": {
         "linearLevel": false
       }
     },
     {
-      "id": 1340,
+      "id": 1447,
       "plugin": "Bogaudio",
       "version": "1.1.26",
       "model": "Bogaudio-FMOp",
@@ -138,14 +138,14 @@ R"=====({
           "value": 0.0
         }
       ],
-      "leftModuleId": 1341,
-      "rightModuleId": 1343,
+      "leftModuleId": 1446,
+      "rightModuleId": 1453,
       "data": {
         "linearLevel": false
       }
     },
     {
-      "id": 1343,
+      "id": 1453,
       "plugin": "Bogaudio",
       "version": "1.1.26",
       "model": "Bogaudio-Mumix",
@@ -183,7 +183,7 @@ R"=====({
           "value": 0.0
         }
       ],
-      "leftModuleId": 1340,
+      "leftModuleId": 1447,
       "data": {
         "clipping_mode": 0,
         "input_gain_db": 0.0
@@ -195,39 +195,46 @@ R"=====({
   "leftWidth": 0.0,
   "cables": [
     {
-      "outputModuleId": 1340,
+      "outputModuleId": 1444,
       "outputId": 0,
-      "inputModuleId": 1343,
-      "inputId": 7,
-      "color": "#0986ad"
-    },
-    {
-      "outputModuleId": 1341,
-      "outputId": 0,
-      "inputModuleId": 1340,
-      "inputId": 6,
-      "color": "#0986ad"
-    },
-    {
-      "outputModuleId": 1344,
-      "outputId": 0,
-      "inputModuleId": 1340,
+      "inputModuleId": 1447,
       "inputId": 4,
       "color": "#c9b70e"
     },
     {
-      "outputModuleId": 1344,
+      "outputModuleId": 1444,
       "outputId": 0,
-      "inputModuleId": 1341,
+      "inputModuleId": 1446,
       "inputId": 4,
       "color": "#0c8e15"
     },
     {
-      "outputModuleId": 1344,
+      "outputModuleId": 1444,
       "outputId": 3,
-      "inputModuleId": 1340,
+      "inputModuleId": 1447,
       "inputId": 5,
       "color": "#c91847"
+    },
+    {
+      "outputModuleId": 1444,
+      "outputId": 3,
+      "inputModuleId": 1446,
+      "inputId": 5,
+      "color": "#c9b70e"
+    },
+    {
+      "outputModuleId": 1446,
+      "outputId": 0,
+      "inputModuleId": 1447,
+      "inputId": 6,
+      "color": "#0986ad"
+    },
+    {
+      "outputModuleId": 1447,
+      "outputId": 0,
+      "inputModuleId": 1453,
+      "inputId": 7,
+      "color": "#0986ad"
     }
   ],
   "version": "1.1.6"

@@ -273,6 +273,79 @@ R"=====({
         }
       ],
       "leftModuleId": 1393,
+      "rightModuleId": 1396,
+      "data": {
+        "linearLevel": false
+      }
+    },
+    {
+      "id": 1396,
+      "plugin": "SubmarineFree",
+      "version": "1.1.1",
+      "model": "TD-202",
+      "params": [],
+      "leftModuleId": 1394,
+      "rightModuleId": 1397,
+      "text": "Three",
+      "fg": "#29b2ef",
+      "bg": "#00000000"
+    },
+    {
+      "id": 1397,
+      "plugin": "Bogaudio",
+      "version": "1.1.26",
+      "model": "Bogaudio-FMOp",
+      "params": [
+        {
+          "id": 0,
+          "value": -0.5
+        },
+        {
+          "id": 1,
+          "value": 0.0
+        },
+        {
+          "id": 2,
+          "value": 0.141421005
+        },
+        {
+          "id": 3,
+          "value": 0.316229999
+        },
+        {
+          "id": 4,
+          "value": 1.0
+        },
+        {
+          "id": 5,
+          "value": 0.316229999
+        },
+        {
+          "id": 6,
+          "value": 0.0
+        },
+        {
+          "id": 7,
+          "value": 0.0
+        },
+        {
+          "id": 8,
+          "value": 1.0
+        },
+        {
+          "id": 9,
+          "value": 0.0
+        },
+        {
+          "id": 10,
+          "value": 0.0
+        },
+        {
+          "id": 11,
+          "value": 0.0
+        }
+      ],
+      "leftModuleId": 1396,
       "rightModuleId": 1395,
       "data": {
         "linearLevel": false
@@ -317,14 +390,14 @@ R"=====({
           "value": 0.0
         }
       ],
-      "leftModuleId": 1394,
+      "leftModuleId": 1397,
       "data": {
         "clipping_mode": 0,
         "input_gain_db": 0.0
       }
     }
   ],
-  "rightWidth": 795.0,
+  "rightWidth": 975.0,
   "leftModules": [],
   "leftWidth": 0.0,
   "cables": [
@@ -372,6 +445,13 @@ R"=====({
     },
     {
       "outputModuleId": 1388,
+      "outputId": 2,
+      "inputModuleId": 1397,
+      "inputId": 4,
+      "color": "#0986ad"
+    },
+    {
+      "outputModuleId": 1388,
       "outputId": 3,
       "inputModuleId": 1391,
       "inputId": 5,
@@ -397,6 +477,27 @@ R"=====({
       "inputModuleId": 1393,
       "inputId": 5,
       "color": "#0986ad"
+    },
+    {
+      "outputModuleId": 1388,
+      "outputId": 5,
+      "inputModuleId": 1397,
+      "inputId": 5,
+      "color": "#c91847"
+    },
+    {
+      "outputModuleId": 1397,
+      "outputId": 0,
+      "inputModuleId": 1393,
+      "inputId": 6,
+      "color": "#c9b70e"
+    },
+    {
+      "outputModuleId": 1397,
+      "outputId": 0,
+      "inputModuleId": 1390,
+      "inputId": 6,
+      "color": "#0c8e15"
     },
     {
       "outputModuleId": 1393,

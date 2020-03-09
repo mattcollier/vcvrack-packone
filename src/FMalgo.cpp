@@ -1285,6 +1285,24 @@ struct StripWidget : ThemedModuleWidget<StripModule> {
 		groupFromJson(rootJ);
 	}
 
+	void groupFmThree() {
+		const char* moduleJson =
+		#include "FMalgoThree.txt"
+		;
+		json_error_t error;
+		json_t* rootJ = json_loads(moduleJson, 0, &error);
+		if (!rootJ) {
+			std::string message = string::f("JSON parsing error at %s %d:%d %s", error.source, error.line, error.column, error.text);
+			osdialog_message(OSDIALOG_WARNING, OSDIALOG_OK, message.c_str());
+			return;
+		}
+		DEFER({
+			json_decref(rootJ);
+		});
+
+		groupFromJson(rootJ);
+	}
+
 	void groupPasteClipboard() {
 		const char* moduleJson = glfwGetClipboardString(APP->window->win);
 		if (!moduleJson) {
@@ -1428,6 +1446,14 @@ struct StripWidget : ThemedModuleWidget<StripModule> {
 			}
 		};
 
+		struct GroupFmThreeMenuItem : MenuItem {
+			StripWidget* moduleWidget;
+
+			void onAction(const event::Action& e) override {
+				moduleWidget->groupFmThree();
+			}
+		};
+
 		struct LoadGroupMenuItem : MenuItem {
 			StripWidget* moduleWidget;
 
@@ -1454,10 +1480,12 @@ struct StripWidget : ThemedModuleWidget<StripModule> {
 		menu->addChild(copyGroupMenuItem);
 		PasteGroupMenuItem* pasteGroupMenuItem = construct<PasteGroupMenuItem>(&MenuItem::text, "Paste", &MenuItem::rightText, "Shift+V", &PasteGroupMenuItem::moduleWidget, this);
 		menu->addChild(pasteGroupMenuItem);
-		GroupFmOneMenuItem* groupFmOneMenuItem = construct<GroupFmOneMenuItem>(&MenuItem::text, "FM Group One", &GroupFmOneMenuItem::moduleWidget, this);
+		GroupFmOneMenuItem* groupFmOneMenuItem = construct<GroupFmOneMenuItem>(&MenuItem::text, "FM Algo One", &GroupFmOneMenuItem::moduleWidget, this);
 		menu->addChild(groupFmOneMenuItem);
-		GroupFmTwoMenuItem* groupFmTwoMenuItem = construct<GroupFmTwoMenuItem>(&MenuItem::text, "FM Group Two", &GroupFmTwoMenuItem::moduleWidget, this);
+		GroupFmTwoMenuItem* groupFmTwoMenuItem = construct<GroupFmTwoMenuItem>(&MenuItem::text, "FM Algo Two", &GroupFmTwoMenuItem::moduleWidget, this);
 		menu->addChild(groupFmTwoMenuItem);
+		GroupFmThreeMenuItem* groupFmThreeMenuItem = construct<GroupFmThreeMenuItem>(&MenuItem::text, "FM Algo Three", &GroupFmThreeMenuItem::moduleWidget, this);
+		menu->addChild(groupFmThreeMenuItem);
 		LoadGroupMenuItem* loadGroupMenuItem = construct<LoadGroupMenuItem>(&MenuItem::text, "Load", &LoadGroupMenuItem::moduleWidget, this);
 		menu->addChild(loadGroupMenuItem);
 		SaveGroupMenuItem* saveGroupMenuItem = construct<SaveGroupMenuItem>(&MenuItem::text, "Save as", &SaveGroupMenuItem::moduleWidget, this);
